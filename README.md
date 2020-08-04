@@ -10,10 +10,25 @@ AJAX
 Database:
 MySQL
 Web server:
-MAMP/XAMP/LAMP
+MAMP/WAMP/LAMP
 
 Installation Notes:
 1. Download PHP version 7.0(If you don't already have php installed but it should be installed with MAMP/LAMP/XAMP)
 2. Download and install the lastest version of LAMP(Linux)/XAMP(Windows)/MAMP(Mac Os)
-3. Clone the repo to in the  "HTDocs" folder located under the "XAMMP" folder on your C: drive. The file path is "C:\xampp\htdocs"
+3. Clone the repo to in the  "HTDocs" folder located under the "XAMMP" folder on your C: drive. The file path is "C:\Bitnami\wamp{VERSION}\apache2\htdocs".
+    i. Check if your servers are running(the apache server and mysql database engine).
 4. Run the Create Script(under Camagru\Configs\setup.php)
+5. Configure the mail function in the php.ini file (C:\Bitnami\wamp{VERSION}\php\php.ini-development or php.ini) for other operating systems this will be found in the installed      path (MAC OS is normally under Applications/Bitnami/LAMP{VERSION}/php/php.ini-development or php.ini).
+   i.
+    
+
+Project Features:
+  i.    User login and registration
+  ii.   Password validation(checks in place to reject basic passwords like password or 123456)
+  iii.  Email verification( By sending confirmation email to users email)
+  iv.   Password Hashing(Storing encrypted passwords in the database)
+  v.    Password Reset(Ability to change password by sending the reset link by email)
+  vi.   Ability to modify user details once logged in.
+  vii.  Logged in users can view, comment on and like images on the site. 
+  viii. Logged in users can upload and edit photos(Images can be uploaded from local storage or taken via webcam)
+  ix.	  User notifications for likes and comments.

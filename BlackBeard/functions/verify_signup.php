@@ -7,7 +7,7 @@ function verify_signup($mail, $username, $password, $ip) {
     $DB_DSN = "mysql:host=127.0.0.1;dbname=".$DB_NAME;
     $DB_DSN1 = "mysql:host=127.0.0.1";
     $DB_USER = "root";
-    $DB_PASSWORD = "TaksForce141";
+    $DB_PASSWORD = "TaskForce141";
     $mail = strtolower($mail);
 
 

@@ -12,7 +12,7 @@ $pass = hash("Whirlpool", $pwd);
 try{
     $conn = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo = $conn->prepare("SELECT * FROM users WHERE Username=? AND Passwd = ? AND varified = 1");
+    $pdo = $conn->prepare("SELECT * FROM users WHERE Username=? AND passwd = ? AND varified = 1");
     $pdo->execute(array($user, $pass));
     $found= $pdo->rowCount();
     $row = $pdo->fetch(PDO::FETCH_ASSOC);
@@ -32,7 +32,6 @@ try{
     else
     {
         $_SESSION['er'] = "User not found or wrong password";
-        
        header('Location: ../views/login.php');
     exit();
     } 

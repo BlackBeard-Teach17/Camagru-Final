@@ -102,7 +102,7 @@ if (empty($_SESSION['id'])) {
     <button class="button button2"><a href="gallery.php" style="text-decoration: none">Gallery</a></button>
     <p>Click on <b>Profile</b> to Update your details</p>
     <p>Or Keep viewing your pictures</p>
-    <p>Click the <a href="../functions/cam.php"><i class="fa fa-camera-retro" ></a></i> Camera to Take pictures</p>
+    <p>Click the <a href="cam.php"><i class="fa fa-camera-retro" ></a></i> Camera to Take pictures</p>
 
     <?php
     session_start();
@@ -135,7 +135,7 @@ if (empty($_SESSION['id'])) {
     ?>
 </div>
 </div>
-<script src="../javascript/Menu_items">
+<script src="../javascript/Menu_items.js">
 
 </script>
 <script>
@@ -150,7 +150,3 @@ if (empty($_SESSION['id'])) {
 </script>
 </body>
 </html>
-
-
-    
-         

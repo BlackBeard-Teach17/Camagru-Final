@@ -1,6 +1,9 @@
 <?php
 session_start();
-require_once 'Config/database.php';
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+require_once '../Config/database.php';
 
 $dbh = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -28,8 +31,8 @@ while ($result = $sql->fetch(PDO::FETCH_ASSOC))
 ?>
 
 <?php
-session_start();
-require_once('config/database.php');
+// session_start();
+require_once('../Config/database.php');
 
 $name =$_SESSION['username'];
 
@@ -100,6 +103,12 @@ $lyk;
             font-size: 200%;
             font-weight: normal;
         }
+        h2
+        {
+            text-align: center;
+            font-family: 'Fredericka the Great', cursive;
+            text-color: red;
+        }
 
     </style>
 </head>
@@ -109,12 +118,13 @@ $lyk;
     <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a class="active" href="home.php"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="cam.php"><i class="fa fa-camera-retro"></i>Camera</a>
+    <a href="cam.php"><i class="fa fa-camera-retro"></i> Camera</a>
     <a href="../functions/logout.php"><i class="fa fa-sign-out"></i> Log Out</a>
     </div>
 </header>
 <h1 class="Head"> Gallery</h1>
-<div id="main" class="main"> <?php
+<div id="main" class="main"> 
+<?php
     if ($result)
         foreach ($result as $row) {
             $count =0;
@@ -171,7 +181,7 @@ $lyk;
            <?php
         }
     else
-        echo "Gallery Empty";
+        echo "<h2>Gallery Empty<h2>";
     ?>
 </div>
 <div class="page">
@@ -182,7 +192,7 @@ $lyk;
 <div class="footer">
     <p>kmfoloe&trade;-Camagru 2018&copy;</p>
 </div>
-<script src="../javascript/Menu_items">
+<script src="../javascript/Menu_items.js">
 </script>
 </body>
 </html>

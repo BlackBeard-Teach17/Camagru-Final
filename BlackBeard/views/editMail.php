@@ -40,7 +40,7 @@
 <div class="footer">
     <p>kmfoloe&trade;-Camagru 2018&copy;</p>
 </div>
-<script src="../javascript/Menu_items">
+<script src="../javascript/Menu_items.js">
 </script>
 </body>
 </html>

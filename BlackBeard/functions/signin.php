@@ -17,9 +17,6 @@ try{
     $found= $pdo->rowCount();
     $row = $pdo->fetch(PDO::FETCH_ASSOC);
     
-    echo $found;
-    echo $pass;
-
     if ($found == 1)
     {
        
